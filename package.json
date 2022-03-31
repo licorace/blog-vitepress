@@ -1,0 +1,26 @@
+{
+  "name": "vitepress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "yarserve": "vitepress serve docs",
+    "deploy": "bash scripts/deploy.sh"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vitepress": "^0.20.9"
+  },
+  "dependencies": {
+    "stylus": "^0.57.0",
+    "stylus-loader": "^6.1.0",
+    "vitepress-theme-demoblock": "^1.4.2"
+  }
+}
