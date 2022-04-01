@@ -1,7 +1,7 @@
 const nav = [
-  { text: '首页', link: 'article/首页/公告' },
+  { text: '首页🏠', link: 'article/首页/公告' },
   {
-    text: '小工具',
+    text: '小工具🔧',
     icon: 'reco-message',
     items: [
       {
@@ -12,7 +12,7 @@ const nav = [
     ],
   },
   {
-    text: '其他网站',
+    text: '其他网站🔗',
     icon: 'reco-message',
     items: [
       // {
