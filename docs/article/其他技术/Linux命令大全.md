@@ -284,6 +284,10 @@ docker stop $(docker ps -a -q)
 docker rm $(docker ps -a -q)
 ```
 
+- 初始化仓库
+```
+git init
+```
 
 - 提交到暂存区
 ```
