@@ -3,7 +3,7 @@ home: true
 heroImage: logo.jpeg
 heroAlt: Logo image
 heroText: Licorace的时光精神小屋
-tagline: 我躺在河里，看着天空流向远方～
+tagline: 我静静躺在河里，看着天空流向远方～
 actionText: Get Started
 actionLink: /article/首页/公告
 features:
