@@ -295,7 +295,7 @@ git add .
 git commit -m '基本搭建完毕'
 ```
 
-// push到github仓库
+- push到github仓库
 ```
 git push --set-upstream origin master
 ```
