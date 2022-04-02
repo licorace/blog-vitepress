@@ -9,8 +9,7 @@
   "scripts": {
     "dev": "vitepress dev docs",
     "build": "vitepress build docs",
-    "yarserve": "vitepress serve docs",
-    "deploy": "bash scripts/deploy.sh"
+    "yarserve": "vitepress serve docs"
   },
   "keywords": [],
   "author": "",
