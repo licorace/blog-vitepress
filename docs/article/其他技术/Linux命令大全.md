@@ -271,3 +271,32 @@
   -  `http://1.116.xxx.xxx`,请求会发送到`http://1.116.xxx.xxx:3000`
   - `http://1.116.xxx.xxx/wx`/,请求会发送到`http://1.116.xxx.xxx:9999`
 
+
+
+- 首先需要停止所有的容器
+```
+docker stop $(docker ps -a -q)
+```
+
+
+- 删除所有的容器(只删除单个时把后面的变量改为container id即可)
+```
+docker rm $(docker ps -a -q)
+```
+
+
+- 提交到暂存区
+```
+git add .
+```
+
+- 提交到本地仓库
+```
+git commit -m '基本搭建完毕'
+```
+
+// push到github仓库
+```
+git push --set-upstream origin master
+```
+
