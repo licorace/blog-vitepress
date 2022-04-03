@@ -324,4 +324,44 @@
    git remote set-url origin https://github.com/octocat/Spoon-Knife.git
   ```
 
+- `git pull`获取最新代码到本地，并自动合并到当前分支
+  ```
+  //git pull = git fetch + merge
+  
+  //查询当前远程分支
+  git remote -v
+
+  //直接拉取并合并最新代码
+  git pull origin master [示例1：拉取远端origin/master分支合并到本地当前分支]
+  git pull origin dev [示例2：拉取远端origin/dev分支合并到本地当前分支]
+  ```
+
+- `git fetch + merge`获取最新代码到本地，然后手动合并分支
+  ```
+  //这种方法不额外建立本地分支，还有另一种需要额外建立本地分支，不推荐
+  //查询当前远程的版本
+  git remote -v
+
+  //获取最新代码到本地(本地当前分支为[branch]，获取的远端的分支为[origin/branch])
+  git fetch origin master  [示例1：获取远端的origin/master分支]
+  git fetch origin dev [示例2：获取远端的origin/dev分支]
+
+  //查看版本差异
+  git log -p master..origin/master [示例1：查看本地master与远端origin/master的版本差异]
+  git log -p dev..origin/dev   [示例2：查看本地dev与远端origin/dev的版本差异]
+
+  //合并最新代码到本地分支
+  git merge origin/master  [示例1：合并远端分支origin/master到当前分支]
+  git merge origin/dev [示例2：合并远端分支origin/dev到当前分支]
+  ```
+
+  - `mac git`删除本地仓库文件
+  ```
+  //递归清除本地文件夹下的Git文件，如果想重新建立仓库，那么在重新初始化新建的git仓库
+
+  //删除文件夹下的所有 .git 文件
+
+  find . -name ".git" | xargs rm -Rf
+  ```
+
 
