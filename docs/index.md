@@ -2,9 +2,9 @@
 home: true
 heroImage: logo.jpeg
 heroAlt: Logo image
-heroText: Licorace的时光精神小屋
+heroText: Licorace的精神时光小屋
 tagline: 我静静躺在河里，看着天空流向远方～
-actionText: Get Started
+actionText: 开始修炼
 actionLink: /article/首页/公告
 features:
   - title: Widely

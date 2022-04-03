@@ -111,7 +111,6 @@
 
   ```
   nohup node app.js # 后台执行app.js
-
   ```
 
 - `jobs`查看后台执行的任务
@@ -272,31 +271,48 @@
   - `http://1.116.xxx.xxx/wx`/,请求会发送到`http://1.116.xxx.xxx:9999`
 
 
+### docker容器及git操作
 
-- 首先需要停止所有的容器
-```
-docker stop $(docker ps -a -q)
-```
+- 停止所有的容器的命令如下
+  ```
+  docker stop $(docker ps -a -q)
+  ```
 
 
 - 删除所有的容器(只删除单个时把后面的变量改为container id即可)
-```
-docker rm $(docker ps -a -q)
-```
+  ```
+  docker rm $(docker ps -a -q)
+  ```
 
 
 - 提交到暂存区
-```
-git add .
-```
+  ```
+  git add .
+  ```
 
 - 提交到本地仓库
-```
-git commit -m '基本搭建完毕'
-```
+  ```
+  git commit -m '基本搭建完毕'
+  ```
 
 - push到github仓库
-```
-git push --set-upstream origin master
-```
+  ```
+  git push --set-upstream origin master
+  ```
+
+- 本地仓库初始化
+  ```
+  git init
+  ```
+
+- 查询当前远程分支
+  ```
+  git remote -v
+  ```
+
+- 本地仓库初始化
+  ```
+  git init
+  ```
+
 
