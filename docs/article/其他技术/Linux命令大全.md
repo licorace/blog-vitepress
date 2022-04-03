@@ -310,9 +310,18 @@
   git remote -v
   ```
 
-- 本地仓库初始化
+- 新增远程仓库的URL
   ```
-  git init
+   git remote add origin  <这里写远程仓库的URL>
+   //例子如下：
+   git remote add origin https://github.com/octocat/Spoon-Knife.git
+  ```
+
+- 更改远程仓库的URL
+  ```
+   git remote set-url origin  <这里写远程仓库的URL>
+   //例子如下：
+   git remote set-url origin https://github.com/octocat/Spoon-Knife.git
   ```
 
 

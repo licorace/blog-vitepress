@@ -14,31 +14,7 @@
 
 ## 列表(List)
 
-:::demo
 
-```vue
-<template>
-	<div class="demo">
-		<iframe
-			src="//player.bilibili.com/player.html?aid=253369241&bvid=BV1yY411b7US&cid=487271372&page=1"
-			scrolling="no"
-			border="0"
-			frameborder="no"
-			framespacing="0"
-			allowfullscreen="true"
-		>
-		</iframe>
-	</div>
-</template>
-<style>
-.demo > iframe {
-	width: 100%;
-	height: 450px;
-}
-</style>
-```
-
-:::
 
 大学时我是有上《数据结构》这门课的，但是好像没听过 **列表** 这一个数据结构。
 
@@ -64,7 +40,7 @@
 | currPos（方法）    | 返回列表的当前位置                 |
 | moveTo（方法）     | 将当前位置移动到指定位置           |
 
-点击[查看源码](https://gitee.com/jimmyxuexue/video-code/blob/master/%E3%80%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95JavaScript%E6%8F%8F%E8%BF%B0%E3%80%8B/%E5%88%97%E8%A1%A8/List.ts)
+
 
 **测试代码**
 
@@ -100,29 +76,7 @@ console.log(names.length); // 4
 
 ## 栈(Stack)
 
-:::demo
 
-```vue
-<template>
-	<div class="demo">
-		<iframe
-			src="//player.bilibili.com/player.html?aid=296290782&bvid=BV1aF411J7j7&cid=503512221&page=1"
-			scrolling="no"
-			border="0"
-			frameborder="no"
-			framespacing="0"
-			allowfullscreen="true"
-		>
-		</iframe>
-	</div>
-</template>
-<style>
-.demo > iframe {
-	width: 100%;
-	height: 450px;
-}
-</style>
-```
 
 :::
 
