@@ -20,7 +20,7 @@ const config = {
 		sidebar,
 		nav,
 		demoblock: lang,
-		logo: '/headlogo.jpeg', // 网站nav栏logo
+		logo: '/favicon.ico', // 网站nav栏logo
 		lastUpdated: 'Last Updated',
 		author: 'licorace', //  作者
 		authorAvatar: '', //  作者头像
