@@ -3,6 +3,7 @@ import './custom.styl'
 import { registerComponents } from "./register-components.js"
 import goods from "../components/App.vue"
 import ChangeMode from "./ChangeMode.vue"
+// import DarkMode from "../components/DarkMode.vue"
 
 export default {
   ...DefaultTheme,
@@ -12,6 +13,7 @@ export default {
     registerComponents(app);
     app.component('goods',goods)
     app.component('ChangeMode',ChangeMode)
+    // app.component('DarkMode',DarkMode)
     // app is the Vue 3 app instance from `createApp()`. router is VitePress'
     // custom router. `siteData`` is a `ref`` of current site-level metadata.
   },

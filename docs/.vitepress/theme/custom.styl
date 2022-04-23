@@ -20,8 +20,29 @@
   // 引用背景色
   --color-block-bg rgba(77,208,225,.15)
 
+  --color-container-p #2b2b2b
+
+  --color-container #666
+
+  --color-table-tr #fff
+
+  --color-table-tr2n #f6f8fa
+
+  --color-tip #f3f5f7
+
+  --color-demobg #eee
+  
+  --color-demo #000
+
+
+  
   
 }
+
+body {
+  font-family: 'Monaco', sans-serif !important
+}
+
 
 // html{
 //   filter: invert(1) hue-rotate(180deg)
@@ -32,16 +53,16 @@
 // }
 
 
-// .demo-area{
-//   background-color #fff;
-//   color: #000;
-//   padding: 22px 24px;
-//   border-radius: 8px;
-//   box-shadow: 0 3px 12px rgba(0, 0, 0, .07), 0 1px 4px rgba(0, 0, 0, .07);
-//   margin-bottom: 1.2em;
-//   transition: background-color .5s ease;
+.demo-area{
+  background-color var(--color-demobg);
+  color  var(--color-demo);
+  padding: 22px 24px;
+  border-radius: 8px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, .07), 0 1px 4px rgba(0, 0, 0, .07);
+  margin-bottom: 1.2em;
+  transition: background-color .5s ease;
   
-// }
+}
 
 .dark-mode{
   display:flex;
@@ -53,6 +74,10 @@
   top:10px;
   right:480px;
   z-index: 18;
+}
+
+.custom-block.tip {
+  background-color var(--color-tip)
 }
 
 .home-features .container h2{
@@ -93,7 +118,8 @@ p.description{
 }
 
 .container
-  color: #555555 !important
+  // color: #555555 !important
+  color var(--color-container)
   background-image: linear-gradient(90deg,rgba(159,219,252,.15) 3%,transparent 0),linear-gradient(1turn,rgba(159,219,252,.15) 3%,transparent 0);
   background-size: 20px 20px;
   background-position: 50%;
@@ -190,8 +216,9 @@ a.sidebar-link-item.active{
    -ms-text-size-adjust: 100%;
    -webkit-text-size-adjust: 100%;
    line-height: 1.5;
-   color: #24292e;
-   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  //  color: #24292e;
+  color var(--color-container)
+  //  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
    font-size: 16px;
    line-height: 1.5;
    word-wrap: break-word;
@@ -460,7 +487,8 @@ a.sidebar-link-item.active{
 .container p {
   margin-top: 0;
   margin-bottom: 10px;
-  color #2b2b2b
+  // color #2b2b2b
+  color var(--color-container-p)
 }
 
 // .container blockquote {
@@ -940,12 +968,12 @@ a.sidebar-link-item.active{
 }
 
 .container table tr {
-  background-color: #fff;
+  background-color var(--color-table-tr);
   border-top: 1px solid #c6cbd1;
 }
 
 .container table tr:nth-child(2n) {
-  background-color: #f6f8fa;
+  background-color var(--color-table-tr2n);
 }
 
 .container img {

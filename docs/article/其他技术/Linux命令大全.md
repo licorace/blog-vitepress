@@ -364,4 +364,16 @@
   find . -name ".git" | xargs rm -Rf
   ```
 
+<!-- <script>
+  import mdchangecolor from '../../.vitepress/theme/mdchangecolor.js'
+  import { onMounted } from 'vue'
+
+  export default {
+    setup(){
+      // onMounted(mdchangecolor)
+      mdchangecolor()
+    }
+  }
+</script> -->
+
 
