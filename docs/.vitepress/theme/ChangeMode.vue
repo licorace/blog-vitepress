@@ -104,7 +104,7 @@ const { Layout } = DefaultTheme
   }
 
   .fa-moon::before{
-    content: url("moon.svg");
+    content: url("../moon.svg");
     /* background-color: red; */
 
     /* 位置不是很好看(以后) */
@@ -117,7 +117,7 @@ const { Layout } = DefaultTheme
   }
 
   .fa-lightbulb::before{
-    content: url("lightbulb.svg");
+    content: url("../lightbulb.svg");
     position: absolute; 
     left: 6px;
     top: 3px;
