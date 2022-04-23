@@ -8,7 +8,7 @@ export default function changecolor(){
     body.style.setProperty('--c-brand','#31b27a')
     body.style.setProperty('background-color','rgba(0, 0, 0, 0.86)')
     body.style.setProperty('--color-container-p','#eee')
-    body.style.setProperty('--c-text-light','#eee')
+    body.style.setProperty('--c-text-light','#d9d9d9')
     body.style.setProperty('--color-container','#eee')
     body.style.setProperty('--c-text','#eee')
     body.style.setProperty('--color-table-tr','#333')
@@ -16,6 +16,8 @@ export default function changecolor(){
     body.style.setProperty('--color-tip','#252525')
     body.style.setProperty('--color-demobg','#363636')
     body.style.setProperty('--color-demo','#eee')
+    body.style.setProperty('--color-main','rgba(0, 255, 255, 0.93)')
+    body.style.setProperty('--color-pcode','#91ef6e')
     
 
   
@@ -58,6 +60,8 @@ export default function changecolor(){
     body.style.setProperty('--color-tip','')
     body.style.setProperty('--color-demobg','')
     body.style.setProperty('--color-demo','')
+    body.style.setProperty('--color-main','')
+    body.style.setProperty('--color-pcode','')
 
 
     //导航栏以及侧边栏的背景值,这是通用的
