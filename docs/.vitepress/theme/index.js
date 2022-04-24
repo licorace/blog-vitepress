@@ -5,25 +5,7 @@ import { registerComponents } from "./register-components.js"
 import goods from "../components/App.vue"
 import ChangeMode from "./ChangeMode.vue"
 // import DarkMode from "../components/DarkMode.vue"
-import { darkthememap,lightthememap,darkmode,lightmode }  from './themefunc.js'
 
-let media = window.matchMedia('(prefers-color-scheme: dark)')
-console.log(media);
-
-let callback = (e) => {
-  let preferDarkMode = e.matches;
-  if (preferDarkMode){
-    console.log("darkmode");
-    darkmode(darkthememap)
-  }else{
-    console.log("lightmode");
-    lightmode(lightthememap)
-  }
-}
-
-if (typeof media.addEventListener === "function"){
-    media.addEventListener('change',callback)
-}
 
 export default {
   ...DefaultTheme,

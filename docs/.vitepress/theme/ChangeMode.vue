@@ -1,6 +1,7 @@
 <script setup>
 import DefaultTheme from 'vitepress/theme'
 const { Layout } = DefaultTheme
+import { darkthememap,lightthememap,darkmode,lightmode }  from './themefunc.js'
 </script>
 
 <template>
@@ -23,7 +24,8 @@ const { Layout } = DefaultTheme
   export default {
     data(){
       return{
-        currentMode: true
+        currentMode: true,
+        isFollow: true
       }
     },
     methods:{
@@ -31,7 +33,35 @@ const { Layout } = DefaultTheme
         this.currentMode = !this.currentMode
         changecolor()
       }
-    }
+    },
+    mounted() {
+    //这一部分是写了以下的函数,以满足自适应跟随系统改变暗黑模式的功能,当ifFollow是true时,会自动跟随,false时将不自动跟随.
+    //vite打包报错 ReferenceError: window is not defined,因为这里面用到了window,而vite采用的是服务端渲染 所以此时找不到对应的window
+    //解决方法是在组件实例被挂载后调用,也就是在mounted中使用,
+    // mounted: function () {
+    //   this.$nextTick(function () {
+        // 仅在整个视图都被渲染之后才会运行的代码
+    // })}
+    this.$nextTick(function autodarkmode() {
+      let media = window.matchMedia("(prefers-color-scheme: dark)");
+      console.log(media);
+
+      let callback = (e) => {
+        let preferDarkMode = e.matches;
+        if (preferDarkMode) {
+          console.log("darkmode");
+          darkmode(darkthememap);
+        } else {
+          console.log("lightmode");
+          lightmode(lightthememap);
+        }
+      };
+
+      if (typeof media.addEventListener === "function" && this.isFollow) {
+        media.addEventListener("change", callback);
+      }
+    })
+  },
 
   }
 </script>
