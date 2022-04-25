@@ -32,18 +32,20 @@ const codebox = () => {
       navigator.clipboard.writeText(code_content.textContent).then(
         () => {
           console.log('Page URL copied to clipboard')
-        }).catch(() => {
-        console.error('Failed to copy: ', err)
-        newButton.addEventListener('click',copy)
-        function copy(){
-          let input = document.createElement('input')
-          input.value = code_content.textContent
-          document.body.appendChild(input);
-          input.select()
-          document.execCommand("copy")
-          document.body.removeChild(input)
-          console.log('Page URL copied to clipboard');
-        }
+        }).catch((err) => {
+        console.error('Failed to copy: ', err);
+        if(err){
+          newButton.addEventListener('click',copy)
+          function copy(){
+            let input = document.createElement('input')
+            input.value = code_content.textContent
+            document.body.appendChild(input);
+            input.select()
+            document.execCommand("copy")
+            document.body.removeChild(input)
+            console.log('Page URL copied to clipboard');
+          }
+        } 
       })
     })
 
