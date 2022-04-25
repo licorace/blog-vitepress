@@ -16,37 +16,27 @@ const codebox = () => {
 
     let code_content = item.querySelector("code")
     // document.execCommand方法已经被弃用了,最好不要用
-    newButton.addEventListener('click',copy)
-    function copy(){
-      let input = document.createElement('input')
-      input.value = code_content.textContent
-      document.body.appendChild(input);
-      input.select()
-      document.execCommand("copy")
-      document.body.removeChild(input)
-      console.log('Page URL copied to clipboard');
-  }
 
-    // newButton.addEventListener('click',async (e) => {
-    //   try {
-    //     await navigator.clipboard.writeText(code_content.textContent);
-    //     console.log('Page URL copied to clipboard');
-    //   } catch (err) {
-    //     console.error('Failed to copy: ', err);
-    //   }
-    // })
+    // newButton.addEventListener('click',copy)
+    // function copy(){
+    //   let input = document.createElement('input')
+    //   input.value = code_content.textContent
+    //   document.body.appendChild(input);
+    //   input.select()
+    //   document.execCommand("copy")
+    //   document.body.removeChild(input)
+    //   console.log('Page URL copied to clipboard');
+    // }
+
+    newButton.addEventListener('click',async (e) => {
+      try {
+        await navigator.clipboard.writeText(code_content.textContent);
+        console.log('Page URL copied to clipboard');
+      } catch (err) {
+        console.error('Failed to copy: ', err);
+      }
+    })
   })
-  // document.execCommand方法已经被弃用了,最好不要用
-  // newButton.addEventListener('click',copy)
-  // function copy(){
-  //   let input = document.createElement('input')
-  //   input.value = code_content.textContent
-  //   document.body.appendChild(input);
-  //   input.select()
-  //   document.execCommand("copy")
-  //   document.body.removeChild(input)
-  //   alert("复制成功")
-  // } 
 }
 
 export default codebox
