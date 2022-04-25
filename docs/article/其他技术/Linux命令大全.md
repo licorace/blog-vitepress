@@ -18,7 +18,7 @@
 
 - `ssh`登录服务器
 
-  ```
+  ```bash
   ssh root@ip
   ```
 
@@ -364,16 +364,12 @@
   find . -name ".git" | xargs rm -Rf
   ```
 
-<!-- <script>
-  import mdchangecolor from '../../.vitepress/theme/mdchangecolor.js'
+<script setup>
+  //codebox.js是一个方法用来在所有的代码块里增加一个copy按钮,点击这个按钮可以复制代码块里的内容到剪贴板
+  import codebox from '../../.vitepress/components/codebox.js'
   import { onMounted } from 'vue'
 
-  export default {
-    setup(){
-      // onMounted(mdchangecolor)
-      mdchangecolor()
-    }
-  }
-</script> -->
+  onMounted(codebox)
+</script>
 
 
