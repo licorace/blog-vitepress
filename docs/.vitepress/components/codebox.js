@@ -8,11 +8,11 @@ const codebox = () => {
     let newContent = document.createTextNode("copy");
     // 添加文本节点 到这个新的 button 元素
     newButton.appendChild(newContent);
-    
+
     //找到这个pre元素的父节点
     let parent = item.parentNode
-  
-    parent.insertBefore(newButton,item);
+
+    parent.insertBefore(newButton, item);
 
     let code_content = item.querySelector("code")
     // document.execCommand方法已经被弃用了,最好不要用
@@ -28,10 +28,23 @@ const codebox = () => {
     //   console.log('Page URL copied to clipboard');
     // }
 
-    newButton.addEventListener('click',() => {
+    newButton.addEventListener('click', () => {
       navigator.clipboard.writeText(code_content.textContent).then(
-        () => {console.log('Page URL copied to clipboard')},
-        () => {console.error('Failed to copy: ', err)})
+        () => {
+          console.log('Page URL copied to clipboard')
+        }).catch(() => {
+        console.error('Failed to copy: ', err)
+        newButton.addEventListener('click',copy)
+        function copy(){
+          let input = document.createElement('input')
+          input.value = code_content.textContent
+          document.body.appendChild(input);
+          input.select()
+          document.execCommand("copy")
+          document.body.removeChild(input)
+          console.log('Page URL copied to clipboard');
+        }
+      })
     })
 
 
@@ -47,5 +60,3 @@ const codebox = () => {
 }
 
 export default codebox
-
-
