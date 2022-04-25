@@ -18,15 +18,15 @@ const codebox = () => {
     // document.execCommand方法已经被弃用了,最好不要用
 
     // newButton.addEventListener('click',copy)
-    // function copy(){
-    //   let input = document.createElement('input')
-    //   input.value = code_content.textContent
-    //   document.body.appendChild(input);
-    //   input.select()
-    //   document.execCommand("copy")
-    //   document.body.removeChild(input)
-    //   console.log('Page URL copied to clipboard');
-    // }
+    function copy(){
+      let input = document.createElement('input')
+      input.value = code_content.textContent
+      document.body.appendChild(input);
+      input.select()
+      document.execCommand("copy")
+      document.body.removeChild(input)
+      console.log('Page URL copied to clipboard');
+    }
 
     newButton.addEventListener('click', () => {
       navigator.clipboard.writeText(code_content.textContent).then(
@@ -36,15 +36,6 @@ const codebox = () => {
         console.error('Failed to copy: ', err);
         if(err){
           newButton.addEventListener('click',copy)
-          function copy(){
-            let input = document.createElement('input')
-            input.value = code_content.textContent
-            document.body.appendChild(input);
-            input.select()
-            document.execCommand("copy")
-            document.body.removeChild(input)
-            console.log('Page URL copied to clipboard');
-          }
         } 
       })
     })
