@@ -34,10 +34,9 @@ const codebox = () => {
           console.log('Page URL copied to clipboard')
         }).catch((err) => {
         console.error('Failed to copy: ', err);
-        if(err){
-          console.log("clipboard只有在localhost中,或者https中才能正常使用,直接用ip地址访问时不可以的呢,将使用execCommand来复制");
-          copy()
-        } 
+        console.log("clipboard只有在localhost中,或者https中才能正常使用,直接用ip地址访问时不可以的呢,将使用execCommand来复制");
+        copy()
+      
       })
     })
 
