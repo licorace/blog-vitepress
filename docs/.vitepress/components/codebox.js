@@ -28,14 +28,21 @@ const codebox = () => {
     //   console.log('Page URL copied to clipboard');
     // }
 
-    newButton.addEventListener('click',async (e) => {
-      try {
-        await navigator.clipboard.writeText(code_content.textContent);
-        console.log('Page URL copied to clipboard');
-      } catch (err) {
-        console.error('Failed to copy: ', err);
-      }
+    newButton.addEventListener('click',() => {
+      navigator.clipboard.writeText(code_content.textContent).then(
+        () => {console.log('Page URL copied to clipboard')},
+        () => {console.error('Failed to copy: ', err)})
     })
+
+
+    // async (e) => {
+    //   try {
+    //     await navigator.clipboard.writeText(code_content.textContent);
+    //     console.log('Page URL copied to clipboard');
+    //   } catch (err) {
+    //     console.error('Failed to copy: ', err);
+    //   }
+    // })
   })
 }
 
