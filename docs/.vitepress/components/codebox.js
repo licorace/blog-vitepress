@@ -17,7 +17,7 @@ const codebox = () => {
     let code_content = item.querySelector("code")
     // document.execCommand方法已经被弃用了,最好不要用
 
-    // newButton.addEventListener('click',copy)
+    newButton.addEventListener('click',copy)
     function copy(){
       let input = document.createElement('input')
       input.value = code_content.textContent
@@ -28,26 +28,17 @@ const codebox = () => {
       console.log('Page URL copied to clipboard');
     }
 
-    newButton.addEventListener('click', () => {
-      navigator.clipboard.writeText(code_content.textContent).then(
-        () => {
-          console.log('Page URL copied to clipboard')
-        }).catch((err) => {
-        console.error('Failed to copy: ', err);
-        console.log("clipboard只有在localhost中,或者https中才能正常使用,直接用ip地址访问时不可以的呢,将使用execCommand来复制");
-        copy()
-      
-      })
-    })
 
+    //clipboard只有在localhost中,或者https中才能正常使用,直接用ip地址访问时不可以的呢,所以暂时将使用execCommand来复制
+    //后续域名备案成功后将使用下面这个方法
 
-    // async (e) => {
-    //   try {
-    //     await navigator.clipboard.writeText(code_content.textContent);
-    //     console.log('Page URL copied to clipboard');
-    //   } catch (err) {
+    // newButton.addEventListener('click', () => {
+    //   navigator.clipboard.writeText(code_content.textContent).then(
+    //     () => {
+    //       console.log('Page URL copied to clipboard')
+    //     }).catch((err) => {
     //     console.error('Failed to copy: ', err);
-    //   }
+    //   })
     // })
   })
 }
