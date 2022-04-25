@@ -33,11 +33,12 @@ function darkmode(darkthememap){
   Object.keys(darkthememap).forEach( key => {
     body.style.setProperty(`--${key}`,darkthememap[key])
   })
-  body.style.setProperty('background-color','rgba(0, 0, 0, 0.86)')
+  // body.style.setProperty('background-color','rgba(0, 0, 0, 0.86)')
+  body.style.setProperty('background-color','#343434')
   const navbar = document.querySelector('.nav-bar')
-  navbar.style.setProperty('background-color','#212121')
+  navbar.style.setProperty('background-color','#343434')
   const sidebar = document.querySelector('.sidebar')
-  sidebar.style.setProperty('background-color','#212121')
+  sidebar.style.setProperty('background-color','#343434')
   const dialog_bgcolor = document.querySelectorAll('body ul.dialog')
   dialog_bgcolor.forEach(item => item.style.setProperty('background-color','#333'))
 }
