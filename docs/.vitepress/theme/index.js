@@ -3,7 +3,8 @@ import './custom.styl'
 import './custom2.styl'
 import { registerComponents } from "./register-components.js"
 import goods from "../components/App.vue"
-import ChangeMode from "./ChangeMode.vue"
+import Layout from "./Layout.vue"
+import record from "../components/putOnRecord.vue"
 // import DarkMode from "../components/DarkMode.vue"
 
 
@@ -14,12 +15,13 @@ export default {
   enhanceApp({ app, router, siteData }) {
     registerComponents(app);
     app.component('goods',goods)
-    app.component('ChangeMode',ChangeMode)
+    app.component('Layout',Layout)
+    app.component('record',record)
     // app.component('DarkMode',DarkMode)
     // app is the Vue 3 app instance from `createApp()`. router is VitePress'
     // custom router. `siteData`` is a `ref`` of current site-level metadata.
   },
-  Layout:ChangeMode
+  Layout:Layout
 }
 
 

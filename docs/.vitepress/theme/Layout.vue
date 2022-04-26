@@ -13,11 +13,11 @@ import { darkthememap,lightthememap,darkmode,lightmode }  from './themefunc.js'
           <i class="fa-lightbulb" v-else></i>
         </a>
       </div>
-      
     </template>
   </Layout>
-  
 </template>
+
+
 
 <script>
   import changecolor from './changemode-color.js'
@@ -109,9 +109,17 @@ import { darkthememap,lightthememap,darkmode,lightmode }  from './themefunc.js'
     margin-bottom: 1.2em; */
     transition: background-color .5s ease;
     position: relative;
-    right: -13px;
-  
-}
+    right: -13px; 
+  }
+
+  .record{
+    position: absolute;
+    left: 814px;
+    top: 900px;
+  }
+
+
+
 
 
 </style>

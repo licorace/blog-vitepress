@@ -74,6 +74,40 @@ p code {
 //   filter: invert(1) hue-rotate(180deg)
 // }
 
+#record-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  position: absolute;
+  top 70px
+
+}
+
+#record{
+    // position: fixed;
+    // left: 820px;
+    // top: 880px;
+    color: var(--c-brand)
+    font-size: 13px;
+    text-decoration: none
+    &:before{
+      // content: url("../../public/备案图标.png")
+      // position relative
+      // top 4px
+      // right 3px
+
+      content: ''
+      background-image url('../../public/备案图标.png')
+      background-size: cover
+      position absolute
+      right 535px
+      // bottom 240px
+
+      width: 16px
+      height: 16px
+    }
+}
+
 
 .demo-area{
   background-color var(--color-demobg);
