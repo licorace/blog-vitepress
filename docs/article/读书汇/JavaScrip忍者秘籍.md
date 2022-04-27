@@ -478,31 +478,7 @@ getFans 和 addFans 由于作用域规则它是可以访问函数内部的 fans 
 
 - 闭包会记住作用域链的全部信息，因此我们不能过度使用。过度使用也会造成性能和效率问题
 
-:::demo
 
-```vue
-<template>
-	<div class="demo">
-		<iframe
-			src="//player.bilibili.com/player.html?aid=978133698&bvid=BV1144y15786&cid=485019585&page=1"
-			scrolling="no"
-			border="0"
-			frameborder="no"
-			framespacing="0"
-			allowfullscreen="true"
-		>
-		</iframe>
-	</div>
-</template>
-<style>
-.demo > iframe {
-	width: 100%;
-	height: 450px;
-}
-</style>
-```
-
-:::
 
 ### 未来的函数：生成器
 
