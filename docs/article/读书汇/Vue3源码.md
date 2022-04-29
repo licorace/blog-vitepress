@@ -1,7 +1,7 @@
 # Vue3 源码阅读记录
 
 ::: tip 前言
-阅读源码是能提高自己编程能力和思维的一个非常有效的方式，和读一本书一样能理解作者想要表达的想法，以及学习作者的优秀思想！例如现在要学习的 Vue3 的源码，对于我来说难度是非常之大的。我学习它的目的除了学习优秀的思想之外，还有一点是现在面试基本这是个必考题 😂😂
+阅读源码是能提高自己编程能力和思维的一个非常有效的方式，和读一本书一样能理解作者想要表达的想法，以及学习作者的优秀思想！例如现在要学习的 Vue3 的源码，对于我来说难度是非常之大的。我学习它的目的除了学习优秀的思想之外，还有一点是现在面试基本这是个必考题 🐶🐶
 
 以前我也有看过，但是一段时间之后就忘了，所以还是使用这种 **“看得见的思考” ** 的方式学习，也可以给其他人 **“费曼”** 一下。
 :::
@@ -26,13 +26,13 @@
 
   ```ts
   function ensureRenderer() {
-  	// 单例 渲染函数 可以简单的理解这个渲染器可以帮助我们创建应用实例
-  	return (
-  		renderer ||
-  		// 通过 createRenderer 创建渲染函数
-  		((renderer = createRenderer < Node),
-  		Element | (ShadowRoot > rendererOptions))
-  	)
+    // 单例 渲染函数 可以简单的理解这个渲染器可以帮助我们创建应用实例
+    return (
+      renderer ||
+      // 通过 createRenderer 创建渲染函数
+      ((renderer = createRenderer < Node),
+      Element | (ShadowRoot > rendererOptions))
+    );
   }
   ```
 
@@ -75,11 +75,11 @@
 
 ```ts
 function ensureRenderer() {
-	return (
-		renderer ||
-		// 通过 createRenderer 创建渲染函数
-		(renderer = createRenderer<Node, Element | ShadowRoot>(rendererOptions))
-	)
+  return (
+    renderer ||
+    // 通过 createRenderer 创建渲染函数
+    (renderer = createRenderer<Node, Element | ShadowRoot>(rendererOptions))
+  );
 }
 ```
 
@@ -89,15 +89,15 @@ function ensureRenderer() {
 
 ```ts
 function baseCreateRenderer(
-	options: RendererOptions,
-	createHydrationFns?: typeof createHydrationFunctions
+  options: RendererOptions,
+  createHydrationFns?: typeof createHydrationFunctions
 ): any {
-	// 省略2000多行 渲染器方法
-	return {
-		render,
-		hydrate,
-		// createApp 返回的实际上是createAppApi（工厂函数）
-		createApp: createAppAPI(render, hydrate),
-	}
+  // 省略2000多行 渲染器方法
+  return {
+    render,
+    hydrate,
+    // createApp 返回的实际上是createAppApi（工厂函数）
+    createApp: createAppAPI(render, hydrate),
+  };
 }
 ```
