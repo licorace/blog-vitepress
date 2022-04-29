@@ -235,20 +235,20 @@
 
   ```
   # firewall-cmd --zone=public --add-port=端口/tcp --permanent
-  
+
   #开放9999端口
   firewall-cmd --zone=public --add-port=9999/tcp --permanent
   #配置立即生效
   firewall-cmd --reload
   ```
 
-  当我们开启一个后端服务的时候向外暴露端口，除了云服务器控制面板里面的端口要开启之外，Linux服务器自身的端口也需要向外开启暴露才行。
+  当我们开启一个后端服务的时候向外暴露端口，除了云服务器控制面板里面的端口要开启之外，Linux 服务器自身的端口也需要向外开启暴露才行。
 
-  因为版本升级到centos8之后，一些配置和7.X的不一样
+  因为版本升级到 centos8 之后，一些配置和 7.X 的不一样
 
-- Nginx反向代理
+- Nginx 反向代理
 
-	修改配置nginx的 **default.conf** 文件
+  修改配置 nginx 的 **default.conf** 文件
 
   ```
   server {
@@ -264,60 +264,66 @@
       }
   }
   ```
-  
+
   这样做实现的是
-  
-  -  `http://1.116.xxx.xxx`,请求会发送到`http://1.116.xxx.xxx:3000`
+
+  - `http://1.116.xxx.xxx`,请求会发送到`http://1.116.xxx.xxx:3000`
   - `http://1.116.xxx.xxx/wx`/,请求会发送到`http://1.116.xxx.xxx:9999`
 
-
-### docker容器及git操作
+### docker 容器及 git 操作
 
 - 停止所有的容器的命令如下
+
   ```
   docker stop $(docker ps -a -q)
   ```
 
+- 删除所有的容器(只删除单个时把后面的变量改为 container id 即可)
 
-- 删除所有的容器(只删除单个时把后面的变量改为container id即可)
   ```
   docker rm $(docker ps -a -q)
   ```
 
-
 - 提交到暂存区
+
   ```
   git add .
   ```
 
 - 提交到本地仓库
+
   ```
   git commit -m '基本搭建完毕'
   ```
 
-- push到github仓库
+- push 到 github 仓库
+
   ```
   git push --set-upstream origin master
   ```
 
 - 本地仓库初始化
+
   ```
   git init
   ```
 
 - 查询当前远程分支
+
   ```
   git remote -v
   ```
 
-- 新增远程仓库的URL
+- 新增远程仓库的 URL
+
   ```
    git remote add origin  <这里写远程仓库的URL>
    //例子如下：
    git remote add origin https://github.com/octocat/Spoon-Knife.git
   ```
 
-- 更改远程仓库的URL
+- 更改远程仓库的 URL
+
   ```
    git remote set-url origin  <这里写远程仓库的URL>
    //例子如下：
@@ -325,9 +331,10 @@
   ```
 
 - `git pull`获取最新代码到本地，并自动合并到当前分支
+
   ```
   //git pull = git fetch + merge
-  
+
   //查询当前远程分支
   git remote -v
 
@@ -337,6 +344,7 @@
   ```
 
 - `git fetch + merge`获取最新代码到本地，然后手动合并分支
+
   ```
   //这种方法不额外建立本地分支，还有另一种需要额外建立本地分支，不推荐
   //查询当前远程的版本
@@ -356,6 +364,7 @@
   ```
 
 - `mac git` 删除本地仓库文件
+
   ```
   //递归清除本地文件夹下的Git文件，如果想重新建立仓库，那么在重新初始化新建的git仓库
 
@@ -363,13 +372,3 @@
 
   find . -name ".git" | xargs rm -Rf
   ```
-
-<script setup>
-  //codebox.js是一个方法用来在所有的代码块里增加一个copy按钮,点击这个按钮可以复制代码块里的内容到剪贴板
-  import codebox from '../../.vitepress/components/codebox.js'
-  import { onMounted } from 'vue'
-
-  onMounted(codebox)
-</script>
-
-
