@@ -16,7 +16,6 @@ export default {
     app.component("goods", goods);
     app.component("Layout", Layout);
     app.component("record", record);
-    app.use(urlchange);
     // app.component('DarkMode',DarkMode)
     // app is the Vue 3 app instance from `createApp()`. router is VitePress'
     // custom router. `siteData`` is a `ref`` of current site-level metadata.
