@@ -26,4 +26,3 @@ console.log(colors.constructor === Array) // true
 console.log(colors instanceof Array) // true
 console.log(Array.prototype.isPrototypeOf(colors)) // true
 ```
-
